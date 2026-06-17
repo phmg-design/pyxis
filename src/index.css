@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink-black: #0B0D12;
+  --color-stellar-white: #ECEDF0;
+  --color-mist-grey: #7E8595;
+  --color-brass: #D6A45A;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* Base custom styles to represent a high-fidelity instrument */
+body {
+  background-color: var(--color-ink-black, #0B0D12);
+  color: var(--color-stellar-white, #ECEDF0);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hairline dividers (0.5px) */
+.hairline-border {
+  border: 0.5px solid rgba(126, 133, 149, 0.25);
+}
+
+.hairline-border-b {
+  border-bottom: 0.5px solid rgba(126, 133, 149, 0.25);
+}
+
+.hairline-border-t {
+  border-top: 0.5px solid rgba(126, 133, 149, 0.25);
+}
+
+.hairline-border-r {
+  border-right: 0.5px solid rgba(126, 133, 149, 0.25);
+}
+
+.hairline-border-l {
+  border-left: 0.5px solid rgba(126, 133, 149, 0.25);
+}
+
+/* Subtle compass line design patterns */
+.receipt-container {
+  background-color: rgba(11, 13, 18, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Pulse keyframes for stellar focal point */
+@keyframes compass-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.08);
+  }
+}
+
+.animate-compass-pulse {
+  animation: compass-pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Subtle horizontal audio-spectrum bars */
+@keyframes bar-breathe {
+  0%, 100% {
+    transform: scaleY(0.15);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-bar-breathe {
+  animation: bar-breathe 2.4s ease-in-out infinite;
+}
+
+/* Hidden scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

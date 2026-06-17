@@ -1,0 +1,6 @@
+{
+  "name": "Pyxis",
+  "description": "An ambient AI voice companion for designers that listens passively, creates task receipts, and confronts avoidances.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
